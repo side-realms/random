@@ -25,12 +25,8 @@ def nxt_all_seed(seed):
     seed = (seed*multiplier+addend) & mask
     return seed
 
-ans = []
 
 ttt, ttt_all = make_seed(711066753, 652137470, 32)
 
-for i in range(100):
-    ans.append(nxt_seed(ttt_all, 32))
-    ttt_all = nxt_all_seed(ttt_all)
+print(nxt_seed(ttt_all, 32))
 
-print("ans: " + str(ans))
